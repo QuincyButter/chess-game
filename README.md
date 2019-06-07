@@ -1,2 +1,2 @@
 # chess-game
-This is my attempt at creating a chess game in java using objects
+A chess game made in java using objects
