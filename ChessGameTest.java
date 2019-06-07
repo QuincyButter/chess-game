@@ -39,6 +39,7 @@ public class ChessGameTest {
 			board.move(x1, y1, x2, y2, team);
 
 		}
+		System.out.println("Congratulations! Player " + team + " has won!");
 		c.close();
 	}
 }

@@ -147,6 +147,7 @@ public class Board {
 	public void move(int x1, int y1, int x2, int y2, int team) {
 		if (board[x2][y2] == null) {
 			board[x2][y2] = board[x1][y1];
+			board[x1][y1] = null;
 		} else {
 			board[x2][y2].setAvail();
 			board[x2][y2] = board[x1][y1];
@@ -167,7 +168,7 @@ public class Board {
 		if (board[x1][y1].team() == board[x2][y2].team())
 			return false;
 		else if (board[x1][y1].type().equals("rook")) {
-
+			
 		} 
 		else if (board[x1][y1].type().equals("bishop")) {
 
