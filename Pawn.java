@@ -7,10 +7,13 @@ public class Pawn extends Piece {
 
 	private int player;
 
+	private String type;
+
 	public Pawn(String name, int team) {
 		this.name = name;
 		this.isAvail = true;
 		this.player = team;
+		this.type = "pawn";
 	}
 
 	@Override
@@ -26,5 +29,18 @@ public class Pawn extends Piece {
 	@Override
 	public int team() {
 		return player;
+	}
+
+	@Override
+	public void setAvail() {
+		if (isAvail)
+			isAvail = false;
+		else
+			isAvail = true;
+	}
+
+	@Override
+	public String type() {
+		return type;
 	}
 }
