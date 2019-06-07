@@ -7,10 +7,13 @@ public class Queen extends Piece {
 
 	private int player;
 
+	private String type;
+
 	public Queen(String name, int team) {
 		this.name = name;
 		this.isAvail = true;
 		this.player = team;
+		this.type = "queen";
 	}
 
 	@Override
@@ -26,5 +29,18 @@ public class Queen extends Piece {
 	@Override
 	public int team() {
 		return player;
+	}
+
+	@Override
+	public void setAvail() {
+		if (isAvail)
+			isAvail = false;
+		else
+			isAvail = true;
+	}
+
+	@Override
+	public String type() {
+		return type;
 	}
 }
